@@ -2,18 +2,18 @@
 
 // case: count circumference of a circle
 const PI = 3.14159;
-let radius;
+const radiusInput = document.getElementById('myText');
 let circumference;
+let clearBtn = document.getElementById('clearInput');
+let submitBtn = document.getElementById('mySubmit');
 
-// add onclick to the button
-document.getElementById('mySubmit').onclick = function () {
-  // get the radius from the user
-  radius = document.getElementById('myText').value;
+// add onclick to the submit button
+submitBtn.onclick = function () {
+  // typecast the radius input to a number
+  let radius = Number(radiusInput.value);
 
-  // typecast the radius to a number
-  radius = Number(radius);
-
-  if (isNaN(radius)) {
+  // check if the input is a valid number
+  if (isNaN(radius) || radius <= 0) {
     window.alert('Please enter a valid number');
   } else {
     // calculate the circumference
@@ -24,4 +24,10 @@ document.getElementById('mySubmit').onclick = function () {
       'myH3'
     ).textContent = `Circumference = ${circumference.toFixed(2)} cm`;
   }
+};
+
+// clear the input field when the clear button is clicked
+clearBtn.onclick = function () {
+  radiusInput.value = '';
+  document.getElementById('myH3').textContent = '';
 };
