@@ -6,6 +6,7 @@ This repository documents my journey of learning JavaScript fundamentals through
 
 - [Project 1 - Circle Circumference](./circle-circumference): Calculate the circumference of a circle based on user input for the radius.
 - [Project 2 - Counter Program](./counter-program): A simple counter application that allows users to increase, decrease, and reset a counter value.
+- [Project 3 - Dice Roll](./random-number-generator): Generate random numbers between 1 and 6, simulating a dice roll.
 
 ## 🚀 How to Run
 
