@@ -92,3 +92,24 @@ switch (true) {
 }
 
 console.log(`Your letter grade is: ${letterGrade}`);
+
+// String methods allow you to manipulates and work with text (strings)
+let userName = 'hey Rara';
+console.log(`${userName.charAt(3)} = ${userName.charCodeAt(3)}`);
+console.log(userName.indexOf('a'));
+console.log(userName.lastIndexOf('a'));
+console.log(`before: ${userName}, after: ${userName.trim()}`);
+console.log(userName.toLowerCase());
+console.log(userName.repeat(3));
+
+let result = userName.includes(' ');
+if (result) {
+  console.log('your username can not include spaces');
+} else {
+  console.log(userName);
+}
+
+let phoneNumber = '123-456-7890';
+let newNumber = phoneNumber.replaceAll('-', '');
+let newNumber2 = phoneNumber.padEnd(15, '0');
+console.log(phoneNumber, newNumber, newNumber2);
