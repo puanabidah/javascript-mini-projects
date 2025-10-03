@@ -113,3 +113,21 @@ let phoneNumber = '123-456-7890';
 let newNumber = phoneNumber.replaceAll('-', '');
 let newNumber2 = phoneNumber.padEnd(15, '0');
 console.log(phoneNumber, newNumber, newNumber2);
+
+// String slicing = creating a substring by extracting part of a string
+let fullName = 'Rara Smith';
+// let firstName = fullName.slice(0, 4);
+// let lastName = fullName.slice(5, 10);
+let firstChar = fullName.slice(0, 1);
+let lastChar = fullName.slice(-5);
+
+let firstName = fullName.slice(0, fullName.indexOf(' '));
+let lastName = fullName.slice(fullName.indexOf(' ') + 1);
+console.log(firstName);
+console.log(lastName);
+
+const email = 'raras1@gmail.com';
+let userName2 = email.slice(0, email.indexOf('@'));
+let extension = email.slice(email.indexOf('@') + 1);
+console.log(userName2);
+console.log(extension);
