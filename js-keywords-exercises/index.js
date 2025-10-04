@@ -172,3 +172,41 @@ if (!isSunny) {
 } else {
   console.log('It is a sunny day!');
 }
+
+// While loop = repeat some code while a condition is true
+// let username3;
+// while (username3 === '' || username3 === null) {
+//   username3 = window.prompt('Enter a username: ');
+// }
+
+// do {
+//   username3 = window.prompt('Enter a username: ');
+// } while (username3 === '' || username3 === null);
+
+// console.log(`Hello ${username3}`);
+
+let loggedIn = false;
+let username4;
+let password;
+
+while (!loggedIn) {
+  username4 = window.prompt('Enter your username:');
+  password = window.prompt('Enter your password:');
+  if (username4 === 'myUsername' && password === 'myPassword') {
+    loggedIn = true;
+    console.log('You are logged in!');
+  } else {
+    console.log('Incorrect credentials, try again!');
+  }
+}
+
+// do {
+//   username4 = window.prompt('Enter your username:');
+//   password = window.prompt('Enter your password:');
+//   if (username4 === 'myUsername' && password === 'myPassword') {
+//     loggedIn = true;
+//     console.log('You are logged in!');
+//   } else {
+//     console.log('Incorrect credentials, try again!');
+//   }
+// } while (!loggedIn);
