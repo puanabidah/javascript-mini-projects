@@ -134,7 +134,7 @@ console.log(extension);
 
 // Method chaining = calling one method after another in one continuous line of code
 
-let username = window.prompt('Enter your username');
+let username = '   raRa Hey';
 
 // --------- NO METHOD CHAINING -----------
 // username = username.trim();
@@ -152,3 +152,23 @@ username =
   username.trim().slice(1).toLowerCase();
 username = username.replaceAll(' ', '_');
 console.log(username);
+
+// Logical Operators = used to combine or manipulate boolean (true/false) values
+// && (AND) operator = true if ALL conditions are true
+// || (OR) operator = true if ONE of the conditions is true
+// ! (NOT) operator = reverses the value of a boolean
+
+const temp = 25;
+if (temp < 0 || temp > 30) {
+  console.log('The weather is bad!');
+} else {
+  console.log('The weather is good!');
+}
+
+const isSunny = false;
+
+if (!isSunny) {
+  console.log('It is cloudy');
+} else {
+  console.log('It is a sunny day!');
+}
