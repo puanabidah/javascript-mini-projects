@@ -131,3 +131,24 @@ let userName2 = email.slice(0, email.indexOf('@'));
 let extension = email.slice(email.indexOf('@') + 1);
 console.log(userName2);
 console.log(extension);
+
+// Method chaining = calling one method after another in one continuous line of code
+
+let username = window.prompt('Enter your username');
+
+// --------- NO METHOD CHAINING -----------
+// username = username.trim();
+// let letter = username.charAt(0);
+// letter = letter.toUpperCase(); // first letter capitalized
+// let otherLetters = username.slice(1);
+// otherLetters = otherLetters.toLowerCase();
+// username = letter + otherLetters;
+// username = username.replaceAll(' ', '_');
+// console.log(username);
+
+// --------- METHOD CHAINING -----------
+username =
+  username.trim().charAt(0).toUpperCase() +
+  username.trim().slice(1).toLowerCase();
+username = username.replaceAll(' ', '_');
+console.log(username);
