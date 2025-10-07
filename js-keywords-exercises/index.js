@@ -185,20 +185,20 @@ if (!isSunny) {
 
 // console.log(`Hello ${username3}`);
 
-let loggedIn = false;
-let username4;
-let password;
+// let loggedIn = false;
+// let username4;
+// let password;
 
-while (!loggedIn) {
-  username4 = window.prompt('Enter your username:');
-  password = window.prompt('Enter your password:');
-  if (username4 === 'myUsername' && password === 'myPassword') {
-    loggedIn = true;
-    console.log('You are logged in!');
-  } else {
-    console.log('Incorrect credentials, try again!');
-  }
-}
+// while (!loggedIn) {
+//   username4 = window.prompt('Enter your username:');
+//   password = window.prompt('Enter your password:');
+//   if (username4 === 'myUsername' && password === 'myPassword') {
+//     loggedIn = true;
+//     console.log('You are logged in!');
+//   } else {
+//     console.log('Incorrect credentials, try again!');
+//   }
+// }
 
 // do {
 //   username4 = window.prompt('Enter your username:');
@@ -210,3 +210,12 @@ while (!loggedIn) {
 //     console.log('Incorrect credentials, try again!');
 //   }
 // } while (!loggedIn);
+
+// for loop = repeat some code a certain number of times
+for (let i = 1; i <= 20; i++) {
+  if (i === 10) {
+    break;
+  } else {
+    console.log(i);
+  }
+}
