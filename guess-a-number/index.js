@@ -1,5 +1,5 @@
 // NUMBER GUESSING GAME
-const minNum = 50;
+const minNum = 1;
 const maxNum = 100;
 let answer = Math.floor(Math.random() * (maxNum - minNum + 1) + minNum);
 console.log(answer);
