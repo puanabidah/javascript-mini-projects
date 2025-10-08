@@ -212,10 +212,29 @@ if (!isSunny) {
 // } while (!loggedIn);
 
 // for loop = repeat some code a certain number of times
-for (let i = 1; i <= 20; i++) {
-  if (i === 10) {
-    break;
-  } else {
-    console.log(i);
-  }
+// for (let i = 1; i <= 20; i++) {
+//   if (i === 10) {
+//     break;
+//   } else {
+//     console.log(i);
+//   }
+// }
+
+// Function = A section of reusable code that performs a specific task.
+// Declare once, use it whenever you want.
+// Call the function to execute the code.
+
+function addTwoNumbers(num1, num2) {
+  return num1 + num2;
 }
+
+function isEven(x) {
+  return x % 2 === 0 ? true : false;
+}
+
+function isValidEmail(email) {
+  return email.includes('@');
+}
+
+console.log(isValidEmail(`rara@gmail.com`));
+console.log(isValidEmail('lala.com'));
