@@ -4,6 +4,7 @@
 const PI = 3.14159;
 const radiusInput = document.getElementById('myText');
 let circumference;
+let diameter;
 let clearBtn = document.getElementById('clearInput');
 let submitBtn = document.getElementById('mySubmit');
 
@@ -18,11 +19,37 @@ submitBtn.onclick = function () {
   } else {
     // calculate the circumference
     circumference = 2 * PI * radius;
+    diameter = 2 * radius;
+    area = PI * radius * radius;
+
+    // clear input field
+    radiusInput.value = '';
 
     // display the circumference
-    document.getElementById(
-      'myH3'
-    ).textContent = `Circumference = ${circumference.toFixed(2)} cm`;
+    document.getElementById('myH3').innerHTML = `
+    <table>
+      <tr>
+        <td>Given Radius</td>
+        <td>=</td>
+        <td>${radius} cm</td>
+      </tr>
+      <tr>
+        <td>Diameter</td>
+        <td>=</td>
+        <td>${diameter} cm</td>
+      </tr>
+      <tr>
+        <td>Circumference</td>
+        <td>=</td>
+        <td>${circumference.toFixed(3)} cm</td>
+      </tr>
+      <tr>
+        <td>Area</td>
+        <td>=</td>
+        <td>${area.toFixed(3)} cm²</td> 
+      </tr>
+    </table>
+    `;
   }
 };
 
