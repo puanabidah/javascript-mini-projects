@@ -1,9 +1,72 @@
 body {
-  font-family: Verdana;
-  font-size: 1.5em;
+  font-family: Arial, sans-serif;
+  background-color: hsla(0, 0%, 88%, 0.42);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsla(0, 0%, 26%, 0.952);
 }
 
+.container {
+  background-color: white;
+  max-width: 500px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px hsla(0, 0%, 25%, 0.5);
+  margin: auto;
+  text-align: center;
+}
+
+#myLabel {
+  font-size: 1.2em;
+  text-align: left;
+  font-weight: bold;
+}
 button {
-  font-size: 0.7em;
+  font-size: 1.2em;
   margin: 20px 20px 20px 0;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(120, 58%, 45%);
+  color: white;
+}
+
+#mySubmit {
+  margin-right: 0;
+}
+
+h1 {
+  color: hsl(195, 100%, 36%);
+}
+
+#myH3 {
+  font-size: 1.3em;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+td:nth-child(1) {
+  text-align: left;
+}
+td:nth-child(3) {
+  text-align: right;
+}
+
+input {
+  font-size: 1.2em;
+  padding: 3px;
+  margin-top: 10px;
+  text-align: center;
 }
