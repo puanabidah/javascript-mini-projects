@@ -13,9 +13,12 @@ submitBtn.onclick = function () {
   // typecast the radius input to a number
   let radius = Number(radiusInput.value);
 
+  document.getElementById('myH3').style.display = 'block';
+
   // check if the input is a valid number
   if (isNaN(radius) || radius <= 0) {
-    window.alert('Please enter a valid number');
+    document.getElementById('myH3').textContent =
+      'Please enter a valid number!';
   } else {
     // calculate the circumference
     circumference = 2 * PI * radius;
@@ -57,4 +60,5 @@ submitBtn.onclick = function () {
 clearBtn.onclick = function () {
   radiusInput.value = '';
   document.getElementById('myH3').textContent = '';
+  document.getElementById('myH3').style.display = 'none';
 };
