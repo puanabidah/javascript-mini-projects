@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(210, 54%, 95%, 0.779);
+}
+
+.container {
+  max-width: 450px;
+  max-height: auto;
+  width: 100%;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background-color: white;
+}
+
+h1 {
+  color: hsl(210, 53%, 45%);
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: hsl(242, 63%, 60%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+#myBtn:disabled {
+  pointer-events: none;
+  cursor: default;
+  transform: none;
+}
+
+input {
+  padding: 10px;
+  font-size: 1.2em;
+  width: 200px;
+  text-align: center;
+  border: 2px solid hsl(210, 53%, 45%);
+  border-radius: 5px;
+  color: hsl(0, 0%, 30%);
+}
+
+#result {
+  font-size: 1.2em;
+  display: none;
+  margin: 0;
+  color: hsl(0, 0%, 21%);
+  white-space: pre-line;
+  line-height: 1.3em;
+}
+
+.clue {
+  margin: 0;
+  color: hsl(0, 0%, 42%);
+  font-size: 1.1em;
+  line-height: 1.3em;
+}

@@ -3,9 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>My website</title>
   </head>
   <body>
+    <div class="container">
+      <h1>Guess My Number</h1>
+      <div class="info">
+        <p class="clue">
+          Guess a random number between <span id="min">1</span> and
+          <span id="max">100</span>.
+        </p>
+        <p class="clue">
+          You have <span id="trial">7</span> attempts to guess the number.
+        </p>
+      </div>
+      <input type="number" id="guessInput" />
+      <button type="button" id="myBtn" disabled>Guess</button>
+      <p id="result"></p>
+      <button type="button" id="playAgainBtn">Play Again</button>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
