@@ -8,13 +8,66 @@ body {
 }
 
 .container {
-  max-width: 400px;
+  max-width: 330px;
+  width: 100%;
   padding: 20px 30px 30px 30px;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+h1 {
+  margin-bottom: 25px;
+  color: hsl(210, 53%, 45%);
+  text-align: center;
+}
+
+label {
+  font-size: 1.2em;
+  display: block;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.1em;
+  display: block;
+  text-align: center;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: hsl(242, 53%, 45%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  margin-bottom: 25px;
+}
+
+button:hover {
+  background-color: hsl(242, 50%, 52%);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+.inputForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 23px;
+}
+
 #result {
-  white-space: pre-line; /* To preserve line breaks in the output*/
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  text-align: center;
+  display: none;
+  white-space: pre-line;
+  line-height: 1.3em;
 }
