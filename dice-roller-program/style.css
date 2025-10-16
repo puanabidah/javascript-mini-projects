@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: hsla(0, 0%, 96%, 0.817);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#container {
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 320px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#diceImages {
+  max-width: 220px;
+  width: 100%;
+}
+
+#diceImages img {
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+}
+
+#diceResult {
+  font-weight: bold;
+}
+
+label,
+input,
+button,
+#diceResult {
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+input {
+  width: 110px;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 6px;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: hsl(210, 100%, 50%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+button:hover {
+  background-color: hsl(210, 100%, 60%);
+}
