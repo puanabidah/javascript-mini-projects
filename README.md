@@ -6,10 +6,11 @@ This repository documents my journey of learning JavaScript fundamentals through
 
 1. [Circle Circumference](./circle-circumference): Calculate the circumference of a circle based on user input for the radius.
 2. [Counter Program](./counter-program): A simple counter application that allows users to increase, decrease, and reset a counter value.
-3. [Dice Roll](./random-number-generator): Generate random numbers between 1 and 6, simulating a dice roll.
+3. [Random Number Generator](./random-number-generator): Generate three random numbers between 1 and 6.
 4. [Age Checking](./age-checking): Check if a user is old enough to enter a site based on their age input.
 5. [Number Guessing Game](./guess-a-number): A game where users guess a randomly generated number between 1 and 100.
 6. [Temperature Converter](./temperature-conversion): Convert temperatures between Celsius and Fahrenheit.
+7. [Dice Roller](./dice-roller-program): Simulate rolling one or more dice and display the results.
 
 ## 🚀 How to Run
 
