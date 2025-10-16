@@ -11,7 +11,7 @@ This repository documents my journey of learning JavaScript fundamentals through
 5. [Number Guessing Game](./guess-a-number): A game where users guess a randomly generated number between 1 and 100.
 6. [Temperature Converter](./temperature-conversion): Convert temperatures between Celsius and Fahrenheit.
 7. [Dice Roller](./dice-roller-program): Simulate rolling one or more dice and display the results.
-   8 [Password Generator](./random-password-generator): Generate a random password based on specified criteria (whether it has symbols/numbers/lower or uppercase).
+8. [Password Generator](./random-password-generator): Generate a random password based on specified criteria (whether it has symbols/numbers/lower or uppercase).
 
 ## 🚀 How to Run
 
