@@ -13,6 +13,7 @@ This repository documents my journey of learning JavaScript fundamentals through
 7. [Dice Roller](./dice-roller-program): Simulate rolling one or more dice and display the results.
 8. [Password Generator](./random-password-generator): Generate a random password based on specified criteria (whether it has symbols/numbers/lower or uppercase).
 9. [Digital Clock](./digital-clock): A real-time digital clock displaying the current time.
+10. [Stopwatch](./stopwatch): A simple stopwatch application with start, stop, resume, and reset functionalities.
 
 ## 🚀 How to Run
 
