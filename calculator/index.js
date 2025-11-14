@@ -36,12 +36,27 @@ class Calculator {
     this.currentOperand = '';
   }
 
+  showPopup(message) {
+    const popup = document.getElementById('popup');
+    popup.textContent = message;
+    popup.classList.remove('hidden');
+    popup.classList.add('show');
+
+    setTimeout(() => {
+      popup.classList.remove('show');
+      setTimeout(() => popup.classList.add('hidden'), 300);
+    }, 3000);
+  }
+
   calculate() {
     let result;
     const prev = parseFloat(this.previousOperand);
     const current = parseFloat(this.currentOperand);
 
-    if (isNaN(prev) || isNaN(current)) return;
+    if (isNaN(prev) || isNaN(current)) {
+      this.showPopup('Invalid format used');
+      return;
+    }
 
     switch (this.operation) {
       case '+':
@@ -54,6 +69,10 @@ class Calculator {
         result = prev * current;
         break;
       case '/':
+        if (current === 0) {
+          this.showPopup('Cannot divide by zero');
+          return;
+        }
         result = prev / current;
         break;
       default:
