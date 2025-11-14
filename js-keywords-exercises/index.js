@@ -378,56 +378,56 @@ const salesTax = 0.05;
 // this= this object
 // super =the parent
 
-class Animal {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
+// class Animal {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
 
-  move(speed) {
-    console.log(`This ${this.name} can move at a speed of ${speed}mph.`);
-  }
-}
+//   move(speed) {
+//     console.log(`This ${this.name} can move at a speed of ${speed}mph.`);
+//   }
+// }
 
-class Rabbit extends Animal {
-  constructor(name, age, runSpeed) {
-    super(name, age);
-    this.runSpeed = runSpeed;
-  }
+// class Rabbit extends Animal {
+//   constructor(name, age, runSpeed) {
+//     super(name, age);
+//     this.runSpeed = runSpeed;
+//   }
 
-  run() {
-    console.log(`This ${this.name} can run`);
-    super.move(this.runSpeed);
-  }
-}
+//   run() {
+//     console.log(`This ${this.name} can run`);
+//     super.move(this.runSpeed);
+//   }
+// }
 
-class Fish extends Animal {
-  constructor(name, age, swimSpeed) {
-    super(name, age);
-    this.swimSpeed = swimSpeed;
-  }
+// class Fish extends Animal {
+//   constructor(name, age, swimSpeed) {
+//     super(name, age);
+//     this.swimSpeed = swimSpeed;
+//   }
 
-  swim() {
-    console.log(`This ${this.name} can swim`);
-    super.move(this.swimSpeed);
-  }
-}
+//   swim() {
+//     console.log(`This ${this.name} can swim`);
+//     super.move(this.swimSpeed);
+//   }
+// }
 
-class Hawk extends Animal {
-  constructor(name, age, flySpeed) {
-    super(name, age);
-    this.flySpeed = flySpeed;
-  }
+// class Hawk extends Animal {
+//   constructor(name, age, flySpeed) {
+//     super(name, age);
+//     this.flySpeed = flySpeed;
+//   }
 
-  fly() {
-    console.log(`This ${this.name} can fly`);
-    super.move(this.flySpeed);
-  }
-}
+//   fly() {
+//     console.log(`This ${this.name} can fly`);
+//     super.move(this.flySpeed);
+//   }
+// }
 
-const rabbit = new Rabbit('rabbit', 1, 25);
-const fish = new Fish('fish', 2, 20);
-const hawk = new Hawk('hawk', 1, 15);
+// const rabbit = new Rabbit('rabbit', 1, 25);
+// const fish = new Fish('fish', 2, 20);
+// const hawk = new Hawk('hawk', 1, 15);
 
 // rabbit.run();
 // fish.swim();
@@ -928,14 +928,61 @@ const hawk = new Hawk('hawk', 1, 15);
 // Times arre approximate (varies based on the workload of the JS runtime env.)
 // setTimeout(callback, delay)
 
-let timeOutId;
+// let timeOutId;
 
-function startTimer() {
-  timeOutId = setTimeout(() => window.alert('Hello'), 3000);
-  console.log('STARTED');
-}
+// function startTimer() {
+//   timeOutId = setTimeout(() => window.alert('Hello'), 3000);
+//   console.log('STARTED');
+// }
 
-function clearTimer() {
-  clearTimeout(timeOutId);
-  console.log('CLEARED');
+// function clearTimer() {
+//   clearTimeout(timeOutId);
+//   console.log('CLEARED');
+// }
+
+// synchronous = Executes line by line consecutively in a sequential manner. Code that waits for an operation to complete.
+// asynchronous = Allows multiple operations to be performed concurrently without waiting. DOesn't block the execution flow and allows the program to continue (I/O operations, network requests, fetching data). can handle with: Callbacks, Promises, Async/Await
+// function func1(callback) {
+//   setTimeout(() => {
+//     console.log('Task 1');
+//     callback();
+//   }, 5000);
+// }
+
+// function func2() {
+//   console.log('Task 2');
+//   console.log('Task 3');
+//   console.log('Task 4');
+// }
+
+// func1(func2);
+
+// Error = an object that is created to represent a problem that occurs often with user input or establishing a connection
+// try { } = encloses code that might potentially cause an eror
+// catch { } = catch and handle any thrown errors from try{}
+// finally {} = (optional) Always executes. Used mostly for clean up ex: close files, close connections, release resources.
+// try {
+//   console.log('Hello');
+// } catch (error) {
+//   console.error(error);
+// } finally {
+//   console.log('This will always executed');
+// }
+try {
+  const dividend = Number(window.prompt('Enter a dividend'));
+  const divisor = Number(window.prompt('Enter a divisor'));
+
+  if (divisor == 0) {
+    throw new Error("you can't divide by zero!");
+  }
+  if (isNaN(dividend) || isNaN(divisor)) {
+    throw new Error('you must enter a number');
+  }
+
+  const result = dividend / divisor;
+  console.log(result);
+} catch (error) {
+  console.error(error);
 }
+1;
+console.log('You have reached the end!');
