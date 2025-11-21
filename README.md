@@ -15,6 +15,7 @@ This repository documents my journey of learning JavaScript fundamentals through
 9. [Digital Clock](./digital-clock): A real-time digital clock displaying the current time.
 10. [Stopwatch](./stopwatch): A simple stopwatch application with start, stop, resume, and reset functionalities.
 11. [Calculator](./calculator): A basic calculator that performs addition, subtraction, multiplication, and division.
+12. [Rock Paper Scissors Game](./rock-paper-scissors): A simple implementation of the classic Rock-Paper-Scissors game where users can play against the computer.
 
 ## 🚀 How to Run
 
