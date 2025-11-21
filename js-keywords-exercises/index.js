@@ -968,21 +968,408 @@ const salesTax = 0.05;
 // } finally {
 //   console.log('This will always executed');
 // }
-try {
-  const dividend = Number(window.prompt('Enter a dividend'));
-  const divisor = Number(window.prompt('Enter a divisor'));
+// try {
+//   const dividend = Number(window.prompt('Enter a dividend'));
+//   const divisor = Number(window.prompt('Enter a divisor'));
 
-  if (divisor == 0) {
-    throw new Error("you can't divide by zero!");
-  }
-  if (isNaN(dividend) || isNaN(divisor)) {
-    throw new Error('you must enter a number');
-  }
+//   if (divisor == 0) {
+//     throw new Error("you can't divide by zero!");
+//   }
+//   if (isNaN(dividend) || isNaN(divisor)) {
+//     throw new Error('you must enter a number');
+//   }
 
-  const result = dividend / divisor;
-  console.log(result);
-} catch (error) {
-  console.error(error);
-}
-1;
-console.log('You have reached the end!');
+//   const result = dividend / divisor;
+//   console.log(result);
+// } catch (error) {
+//   console.error(error);
+// };
+// console.log('You have reached the end!');
+
+// DOM = DOCUMENT OBJECT MODEL
+// object{} that represents the page you see in the web browser and provides you with an API to interact with it.
+// web browser constructs the DOM when it loads an HTML document, and structures all the elements in a tree-like representation.
+// JavaScript can access the DOM to dinamically change the content, structure, and style of a web page.
+
+// const username = 'Ara';
+// const welcomeMsg = document.getElementById('welcome-msg');
+
+// welcomeMsg.textContent += username === '' ? ' Guest' : ` ${username}`;
+
+// element selectors = methods used to target and manipulate HTML elements. they allow you to select one or multiple HTML elements from the DOM (Document Object Model)
+
+// 1. document.getElementById() ELEMENT OR NULL
+// 2. document. getElementsClassName() HTML collection
+// 3. document.getElementByTagName() HTML collection
+// 4. document.querySelector() ELEMENT OR NULL
+// 5. document. querySelectorAll() NODELIST
+
+// const myHeading = document.getElementById('my-heading');
+// myHeading.style.backgroundColor = 'yellow';
+// myHeading.style.textAlign = 'center';
+
+// console.log(myHeading);
+
+// const fruits = document.getElementsByClassName('fruits');
+
+// console.log(fruits);
+
+// fruits[0].style.backgroundColor = 'yellow';
+// for (const fruit of fruits) {
+//   fruit.style.backgroundColor = 'yellow';
+// }
+// const fr = Array.from(fruits);
+// fr.forEach((fruit) => (fruit.style.backgroundColor = 'red'));
+
+// const arr = ['a', 'b', 'c'];
+
+// for (const i in arr) {
+//   console.log(typeof i, i);
+// }
+
+// for (const i of arr) {
+//   console.log(typeof i, i);
+// }
+
+// arr.forEach((element, index) => {
+//   console.log(`[${index}]: ${element}`);
+// });
+
+// const arr2 = [1, 2, 3, 4];
+// const doubled = arr2.map((el) => el * 2);
+// console.log(doubled);
+
+// const even = arr2.filter((el) => el % 2 === 0);
+// console.log(even);
+
+// const sum = arr2.reduce((accumulator, current) => accumulator + current, 0);
+// console.log(sum);
+
+// GET ELEMENT BY TAG NAME
+// const h4Elements = document.getElementsByTagName('h4');
+// console.log(h4Elements);
+
+// const liElements = document.getElementsByTagName('li');
+// console.log(liElements);
+
+// for (const element of liElements) {
+//   element.style.backgroundColor = 'green';
+// }
+
+// for (const element of h4Elements) {
+//   element.style.backgroundColor = 'yellow';
+// }
+// h4Elements[0].style.backgroundColor = 'yellow';
+
+// Array.from(h4Elements).forEach((el) => (el.style.backgroundColor = 'pink'));
+
+// Array.from(liElements).forEach(
+//   (el) => (el.style.backgroundColor = 'lightgreen')
+// );
+
+// QUERY SELECTOR = find the first matching element or null if it can't find
+
+// const element = document.querySelector('#non-root');
+// console.log(element);
+
+// element.style.backgroundColor = 'yellow';
+
+// QUERY SELECTOR ALL
+// const fruits = document.querySelectorAll('li');
+// console.log(fruits);
+
+// fruits.forEach((el) => (el.style.backgroundColor = 'lightblue'));
+
+// DOM Navigation = The process of navigating through the structure of an HTML document using JavaScript
+
+// --------.firstElementChild--------
+// const element = document.getElementById('desserts');
+// const firstChild = element.firstElementChild;
+
+// firstChild.style.backgroundColor = 'yellow';
+
+// console.log(firstChild);
+
+// const ulElements = document.querySelectorAll('ul');
+// ulElements.forEach(
+//   (el) => (el.firstElementChild.style.backgroundColor = 'lightblue')
+// );
+
+// -----.lastElementChild-----
+
+// const element1 = document.getElementById('desserts');
+
+// const lastChild = element1.lastElementChild;
+
+// lastChild.style.backgroundColor = 'lightgrey';
+
+// const elements2 = document.querySelectorAll('ul');
+
+// elements2.forEach(
+//   (el) => (el.lastElementChild.style.backgroundColor = 'lightpink')
+// );
+
+// -------.nextElementSibling-------
+// const element = document.getElementById('vegetables');
+// const nextSibling = element.nextElementSibling;
+// nextSibling.style.backgroundColor = 'lightgreen';
+
+// -----.previousElementSibling------
+// document.getElementById(
+//   'desserts'
+// ).previousElementSibling.style.backgroundColor = 'pink';
+
+// -----.parentElement------
+// const parentElement = document.getElementById('apple').parentElement;
+
+// parentElement.style.backgroundColor = 'yellow';
+
+// childs = parentElement.querySelectorAll('li');
+
+// childs.forEach((el) => (el.style.backgroundColor = 'lightblue'));
+
+// -----.children------
+// const element = document.getElementById('fruits');
+// const child = element.children;
+
+// Array.from(child).forEach((el) => (el.style.backgroundColor = 'yellow'));
+
+// child[1].style.backgroundColor = 'yellow';
+
+// for (el of child) {
+//   el.style.backgroundColor = 'yellow';
+// }
+
+// ADD & CHANGE HTML
+// STEP 1 CREATE THE ELEMENT
+// const newH1 = document.createElement('h1');
+// newH1.id = 'myH1';
+// newH1.style.color = 'tomato';
+// newH1.style.textAlign = 'center';
+
+// // ADD ATTRIBUTES/PROPERTIES
+// newH1.textContent = 'I like pizza';
+
+// APPEND ELEMENT DOM
+// document.body.append(newH1);
+// document.getElementById('box1').prepend(newH1);
+// const box2 = document.getElementById('box2');
+//document.body.insertBefore(newH1, box2);
+
+// const box = document.getElementsByClassName('box');
+// const box = document.querySelectorAll('.box');
+
+// const n = 2;
+// document.body.insertBefore(newH1, box[n - 1]);
+
+// REMOVE HTML ELEMENT
+// document.body.lastChild.remove();
+// document.body.removeChild(newH1);
+// document.getElementById('box1').removeChild(newH1);
+
+// ---- EXAMPLE 3---
+// CREATE THE ELEMENT
+// const newListItem = document.createElement('li');
+// newListItem.textContent = 'coconut';
+// newListItem.id = 'coconut';
+// newListItem.style.fontWeight = 'bold';
+// newListItem.style.backgroundColor = 'lightgreen';
+// document.getElementById('fruits').append(newListItem);
+// const banana = document.getElementById('banana');
+// document.getElementById('fruits').insertBefore(newListItem, banana);
+// const listItems = document.querySelectorAll('#fruits li');
+// document.getElementById('fruits').insertBefore(newListItem, listItems[1]);
+
+// REMOVE ITEM
+// const coconut = document.getElementById('coconut');
+// const parentElement = document.getElementById('fruits');
+// parentElement.removeChild(coconut);
+
+// document.getElementById('fruits').removeChild(newListItem);
+
+// eventListener = listen for specific events to create interactive web pages
+// events: click, mouseover, mouseout
+// .addEventListener(event, callback);
+
+// const myBox = document.getElementById('myBox');
+// const myButton = document.getElementById('myButton');
+
+// myButton.addEventListener('click', () => {
+//   myBox.style.backgroundColor = 'pink';
+//   myBox.textContent = 'Hello 😊';
+// });
+// myButton.addEventListener('mouseover', () => {
+//   myBox.style.backgroundColor = 'yellow';
+//   myBox.textContent = 'Warning 😧';
+// });
+// myButton.addEventListener('mouseout', () => {
+//   myBox.style.backgroundColor = 'lightgreen';
+//   myBox.textContent = 'Click Me 😃';
+// });
+
+// .eventListener: events=> keydown, keyup, keypress
+// const myBox = document.getElementById('myBox');
+
+// document.addEventListener('keydown', () => {
+//   myBox.textContent = '😧';
+//   myBox.style.backgroundColor = 'tomato';
+// });
+
+// document.addEventListener('keyup', () => {
+//   myBox.textContent = '😃';
+//   myBox.style.backgroundColor = 'lightblue';
+// });
+
+// document.addEventListener('keydown', (event) =>
+//   console.log(`Key down = ${event.key}`)
+// );
+// document.addEventListener('keyup', (event) =>
+//   console.log(`Key up = ${event.key}`)
+// );
+
+// const moveAmount = 100; //for pixels
+// let x = 0;
+// let y = 0;
+
+// document.addEventListener('keydown', (event) => {
+//   event.preventDefault();
+//   if (!event.key.startsWith('Arrow')) return;
+
+//   switch (event.key) {
+//     case 'ArrowUp':
+//       y -= moveAmount;
+//       console.log(y);
+//       break;
+//     case 'ArrowDown':
+//       y += moveAmount;
+//       console.log(y);
+//       break;
+//     case 'ArrowRight':
+//       x += moveAmount;
+//       console.log(x);
+//       break;
+//     case 'ArrowLeft':
+//       x -= moveAmount;
+//       console.log(x);
+//       break;
+//   }
+
+//   myBox.textContent = '😧';
+//   myBox.style.backgroundColor = 'tomato';
+//   myBox.style.top = `${y}px`;
+//   myBox.style.left = `${x}px`;
+// });
+
+// HIDE/SHOW HTML
+// const myButton = document.getElementById('myButton');
+// const myImg = document.getElementById('myImg');
+
+// myButton.addEventListener('click', () => {
+//   myImg.classList.toggle('hidden');
+//   myButton.textContent = myImg.classList.contains('hidden') ? 'Show' : 'Hide';
+
+//   // if (myImg.style.display === 'none') {
+//   //   myImg.style.display = 'block';
+//   //   myButton.textContent = 'Hide';
+//   // } else {
+//   //   myImg.style.display = 'none';
+//   //   myButton.textContent = 'Show';
+//   // }
+// });
+
+// NodeList = static collection of HTML elements by (id, class, element). can be created by using querySelectorAll(). Similar to an array, but no (map, filter, reduce).
+// Nodelist won't update to automatically reflect changes to the DOM.
+// let buttons = document.querySelectorAll('.myButtons');
+
+// buttons.forEach((button) => {
+//   button.addEventListener('click', (event) => {
+//     event.target.style.backgroundColor = 'tomato';
+//   });
+// });
+// buttons.forEach((button) => {
+//   button.addEventListener(
+//     'mouseover',
+//     (event) => (event.target.style.backgroundColor = 'hsl(205, 100%, 40%)')
+//   );
+// });
+// buttons.forEach((button) => {
+//   button.addEventListener('mouseout', (event) => {
+//     event.target.style.backgroundColor = 'hsl(205, 100%, 60%)';
+//   });
+// });
+
+// ADD NEW ELEMENT TO EXISTING NODELIST
+// const newButton = document.createElement('button');
+// newButton.textContent = 'Button 5';
+// newButton.classList.add('myButtons');
+// document.body.appendChild(newButton);
+// buttons = document.querySelectorAll('.myButtons');
+// console.log(buttons);
+
+// REMOVE AN ELEMENT IN NODELIST WHEN CLICKING
+// buttons.forEach((button) => {
+//   button.addEventListener('click', (event) => {
+//     event.target.remove();
+//     buttons = document.querySelectorAll('.myButtons');
+//     console.log(buttons);
+//   });
+// });
+
+// document.body.addEventListener('click', (event) => {
+//   if (event.target.classList.contains('myButtons')) {
+//     event.target.remove();
+//     buttons = document.querySelectorAll('.myButtons');
+//     console.log(buttons);
+//   }
+// });
+
+// classList = element property in Javascript used to interact with an element's list of classes (css classes). allows you to make reusable classes for many elements across you web page.
+// add(), remove(), toggle(remove if present, add if not), replace(oldclass, newclass), contains()
+
+// const myButton = document.getElementById('myButton');
+// const myH1 = document.getElementById('myH1');
+
+// myH1.classList.add('enabled');
+// myButton.classList.add('enabled');
+// myButton.classList.remove('enabled');
+// myButton.addEventListener('mouseover', (event) => {
+//   event.target.classList.toggle('hover');
+// });
+// myButton.addEventListener('mouseout', (event) => {
+//   event.target.classList.toggle('hover');
+// });
+
+// myButton.addEventListener('click', (event) => {
+//   if (event.target.classList.contains('enabled')) {
+//     event.target.classList.replace('enabled', 'disabled');
+//   } else {
+//     event.target.textContent += '🤬';
+//   }
+// });
+// myH1.addEventListener('click', (event) => {
+//   if (event.target.classList.contains('enabled')) {
+//     event.target.classList.replace('enabled', 'disabled');
+//   } else {
+//     event.target.textContent += '🤬';
+//   }
+// });
+
+let myButtons = document.querySelectorAll('.myButtons');
+
+myButtons.forEach((button) => {
+  button.classList.add('enabled');
+  button.addEventListener('click', (event) => {
+    if (event.target.classList.contains('disabled')) {
+      event.target.textContent += '😧';
+    } else {
+      event.target.classList.replace('enabled', 'disabled');
+    }
+  });
+
+  button.addEventListener('mouseover', (event) => {
+    event.target.classList.toggle('hover');
+  });
+  button.addEventListener('mouseout', (event) => {
+    event.target.classList.toggle('hover');
+  });
+});
