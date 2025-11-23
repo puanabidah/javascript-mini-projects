@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  height: 100vh;
+}
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.slider img {
+  width: 100%;
+  display: none;
+  animation-name: fade;
+  animation-duration: 0.5s;
+  height: 100vh;
+}
+
+.slider img.active {
+  display: block;
+}
+
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(222, 221, 221, 0.5);
+  color: black;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
