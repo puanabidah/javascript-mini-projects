@@ -17,7 +17,7 @@ This repository documents my journey of learning JavaScript fundamentals through
 11. [Calculator](./calculator): A basic calculator that performs addition, subtraction, multiplication, and division.
 12. [Rock Paper Scissors Game](./rock-paper-scissors): A simple implementation of the classic Rock-Paper-Scissors game where users can play against the computer.
 13. [Image Slider](./image-slider): An image slider that allows users to navigate through a set of images using next and previous buttons.
-14. [Pokemon Hunt](./pokemon-hunt): Fetch and display Pokémon sprites based on user input using the PokéAPI.
+14. [Pokemon Hunt](./pokemon-hunt): Fetch and display Pokémon sprites based on user input using the [PokéAPI](https://pokeapi.co).
 
 ## 🚀 How to Run
 
