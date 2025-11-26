@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Spongebob Squarepants",
+    "age": 40,
+    "isEmployed": true
+  },
+  {
+    "name": "Patrick Star",
+    "age": 38,
+    "isEmployed": false
+  },
+  {
+    "name": "Squidward Tentacles",
+    "age": 45,
+    "isEmployed": true
+  }
+]

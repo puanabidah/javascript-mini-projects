@@ -654,7 +654,7 @@ const salesTax = 0.05;
 
 // nested objects = objects inside of other objects. allows you to represent more complex data structures.
 // Child object is enclosed by a Parent Object
-// Person{Address{}, ContactInfo{}}
+// Person{Address{}, ContactMessage{}}
 // ShoppingCart{Keyboard{}, Mouse{}, Monitor{}}
 // const person = {
 //   fullName: 'Spongebob Squarepants',
@@ -1354,22 +1354,274 @@ const salesTax = 0.05;
 //   }
 // });
 
-let myButtons = document.querySelectorAll('.myButtons');
+// let myButtons = document.querySelectorAll('.myButtons');
 
-myButtons.forEach((button) => {
-  button.classList.add('enabled');
-  button.addEventListener('click', (event) => {
-    if (event.target.classList.contains('disabled')) {
-      event.target.textContent += '😧';
-    } else {
-      event.target.classList.replace('enabled', 'disabled');
-    }
-  });
+// myButtons.forEach((button) => {
+//   button.classList.add('enabled');
+//   button.addEventListener('click', (event) => {
+//     if (event.target.classList.contains('disabled')) {
+//       event.target.textContent += '😧';
+//     } else {
+//       event.target.classList.replace('enabled', 'disabled');
+//     }
+//   });
 
-  button.addEventListener('mouseover', (event) => {
-    event.target.classList.toggle('hover');
-  });
-  button.addEventListener('mouseout', (event) => {
-    event.target.classList.toggle('hover');
-  });
-});
+//   button.addEventListener('mouseover', (event) => {
+//     event.target.classList.toggle('hover');
+//   });
+//   button.addEventListener('mouseout', (event) => {
+//     event.target.classList.toggle('hover');
+//   });
+// });
+
+// CALLBACK HELL = A situation in JavaScipt where callbacks are nested within other callbacks to the degree where the code is difficult to read. This is the old pattern to handle asynchronous functions. Use Promises + async/await to avoid callback hell.
+
+// function task1() {
+//   setTimeout(() => console.log('Task 1 complete'), 2000);
+// }
+// function task2() {
+//   setTimeout(() => console.log('Task 2 complete'), 1000);
+// }
+// function task3() {
+//   setTimeout(() => console.log('Task 3 complete'), 3000);
+// }
+// function task4() {
+//   setTimeout(() => console.log('Task 4 complete'), 1500);
+// }
+
+// task1();
+// task2();
+// task3();
+// task4();
+// console.log('All task complete');
+
+// function task1(callback) {
+//   setTimeout(() => {
+//     console.log('Task 1 complete');
+//     callback();
+//   }, 2000);
+// }
+// function task2(callback) {
+//   setTimeout(() => {
+//     console.log('Task 2 complete');
+//     callback();
+//   }, 1000);
+// }
+// function task3(callback) {
+//   setTimeout(() => {
+//     console.log('Task 3 complete');
+//     callback();
+//   }, 3000);
+// }
+// function task4(callback) {
+//   setTimeout(() => {
+//     console.log('Task 4 complete');
+//     callback();
+//   }, 1500);
+// }
+// function task5(callback) {
+//   setTimeout(() => {
+//     console.log('Task 5 complete');
+//     callback();
+//   }, 2000);
+// }
+
+// task1(() => {
+//   task2(() => {
+//     task3(() => {
+//       task4(() => {
+//         task5(() => {
+//           console.log('All tasks complete');
+//         });
+//       });
+//     });
+//   });
+// });
+
+// callback async
+// function walkDog(callback) {
+//   setTimeout(() => {
+//     console.log('You walk the dog');
+//     callback();
+//   }, 3000);
+// }
+
+// function cleanTheKitchen(callback) {
+//   setTimeout(() => {
+//     console.log('You clean the kitchen');
+//     callback();
+//   }, 3000);
+// }
+
+// function takeOutTrash(callback) {
+//   setTimeout(() => {
+//     console.log('You take out the trash');
+//     callback();
+//   }, 2000);
+// }
+
+// walkDog(
+//   () => {
+//   cleanTheKitchen(
+//     () => {
+//     takeOutTrash(
+//       () => {
+//       console.log('All chores are done');
+//     }
+//   );
+//   }
+// );
+// }
+// );
+
+// PROMISE = an object that manages asynchronous operations. wrap a promise object around {asynchronous code}. "I promise to return a value". PENDING -> RESOLVED OR REJECTED. new Promise((resolve, reject) => {asynchronous code})
+
+// function walkDog() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const dogWalked = true;
+//       if (dogWalked) {
+//         resolve("You walk the dog");
+//       } else {
+//         reject(`You DIDN'T walk the dog`);
+//       }
+//     }, 3000);
+//   });
+// }
+
+// function cleanTheKitchen() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const kitchenCleaned = true;
+//       if (kitchenCleaned) {
+//         resolve("You clean the kitchen");
+//       } else {
+//         reject(`You DIDN'T clean the kitchen`);
+//       }
+//     }, 3000);
+//   });
+// }
+
+// function takeOutTrash() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const trashTakenOut = true;
+//       if (trashTakenOut) {
+//         resolve("You take out the trash");
+//       } else {
+//         reject(`You DIDN'T take out the trash`);
+//       }
+//     }, 2000);
+//   });
+// }
+
+// walkDog()
+//   .then((value) => {
+//     console.log(value);
+//     return cleanTheKitchen();
+//   })
+//   .then((value) => {
+//     console.log(value);
+//     return takeOutTrash();
+//   })
+//   .then((value) => {
+//     console.log(value);
+//     console.log('All tasks are done');
+//   })
+//   .catch((error) => {
+//     console.error(error);
+//   });
+
+// Promise.all([walkDog(), cleanTheKitchen(), takeOutTrash()])
+//   .then((values) => {
+//     values.forEach((value) => console.log(value));
+//     console.log('all tasks are done');
+//   })
+//   .catch((error) => {
+//     console.error(error);
+//   });
+
+// Promise.allSettled([walkDog(), cleanTheKitchen(), takeOutTrash()]).then(
+//   (values) => {
+//     values.forEach((el) => {
+//       if (el.status === 'fulfilled') {
+//         console.log(el.value);
+//       } else {
+//         console.log(el.reason);
+//       }
+//     });
+//     console.log('all tasks are done');
+//   }
+// );
+
+// NOTE: kalo pake if (el.value) buat ngeceknya ada edge case kecil kalau suatu promise resolve dengan nilai seperti '', 0, false, atau null. jadi dia bakal salah deteksi dia bikin itu reject padahal fulfilled. yang aman cek dari statusnya aja if (el.status === 'fulfilled')
+
+// ASYNC = makes a function return a promise
+// AWAIT = makes an async function wait for a promise.
+// Allows you to write asynchronous code in a synchronous manner. Async doesn't have resolve or object parameters. Everything after AWAIT is placed in an event queue.
+
+// async function doChores() {
+//   try {
+//     const dogWalkedResult = await walkDog();
+//     console.log(dogWalkedResult);
+
+//     const kitchenCleanedResult = await cleanTheKitchen();
+//     console.log(kitchenCleanedResult);
+
+//     const trashTakenOutResult = await takeOutTrash();
+//     console.log(trashTakenOutResult);
+
+//     console.log('All tasks are done!');
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }
+
+// doChores();
+
+// JSON (JavaScript Object Notation) data interchange format, used for exchanging data between a server and a web application JSON files {key:value} OR [value1, value2, value3]
+// JSON stringify() = converts a JS object to a JSON string
+// JSON.parse() = convert a JSON string to JS object.
+
+// const jsonNames = `[
+//   "Spongebob",
+//   "Patrick",
+//   "Squidward",
+//   "Mr. Krabs",
+//   "Sandy",
+//   "Plankton"
+// ]`;
+// const jsonPerson = `{
+//   "name": "Spongebob Squarepants",
+//   "age": 40,
+//   "isEmployed": true,
+//   "hobbies": ["jellyfishing", "crabby patty making", "bubble blowing"]
+// }`;
+
+// const jsonPeople = `[{ "name": "Spongebob Squarepants","age": 40,"isEmployed": true},
+//   {"name": "Patrick Star","age": 38,"isEmployed": false},{"name": "Squidward Tentacles","age": 45,"isEmployed": true}]`;
+
+// // const jsonString = JSON.stringify(people);
+// // console.log(jsonString);
+// const parsedData = JSON.parse(jsonPerson);
+// console.log(parsedData);
+
+// fetch("people.json")
+//   .then((res) => res.json())
+//   .then((values) => values.forEach((el) => console.log(el.name)))
+//   .catch((error) => {
+//     console.error(error);
+//   });
+
+// fetch = FUnction used for making HTTP requests to fetch resources. (JSON style data, images, files). simplifies asynchronous data fetching in JS and used for interacting with APIs to retrieve and send data asynchronously over the web.
+// fetch(url, options)
+
+// fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+//   .then((res) => {
+//     if (!res.ok) {
+//       throw new Error("Could not fetch the data");
+//     }
+//     return res.json();
+//   })
+//   .then((data) => console.log(data.id))
+//   .catch((error) => console.log(error));
