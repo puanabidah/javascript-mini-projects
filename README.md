@@ -18,6 +18,7 @@ This repository documents my journey of learning JavaScript fundamentals through
 12. [Rock Paper Scissors Game](./rock-paper-scissors): A simple implementation of the classic Rock-Paper-Scissors game where users can play against the computer.
 13. [Image Slider](./image-slider): An image slider that allows users to navigate through a set of images using next and previous buttons.
 14. [Pokemon Hunt](./pokemon-hunt): Fetch and display Pokémon sprites based on user input using the [PokéAPI](https://pokeapi.co).
+15. [Weather App](./weather-app): A weather application that fetches and displays current weather data for a specified city using the [OpenWeather API](https://openweathermap.org/api).
 
 ## 🚀 How to Run
 
