@@ -85,14 +85,12 @@ function displayError(message) {
   container.appendChild(errorDisplay);
 }
 
-function capitalizedWord(word) {
-  return !word.includes(" ")
-    ? word.slice(0, 1).toUpperCase() + word.slice(1).trim()
-    : word
-        .split(" ")
-        .map((word) => word.slice(0, 1).toUpperCase() + word.slice(1))
-        .join(" ")
-        .trim();
+function capitalizedWord(str) {
+  return str
+    .trim()
+    .split(/\s+/)
+    .map((w) => w[0].toUpperCase() + w.slice(1))
+    .join(" ");
 }
 
 function clearState() {
